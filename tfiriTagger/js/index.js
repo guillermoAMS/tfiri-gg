@@ -22,8 +22,12 @@ function handleFiles(input) {
 	fileSpecs ={name:  input[0].name,
 				width: "",
 				height:""};
-	drawInCanvas(input[0]);
 
+	$("#nav_upload").removeClass("active");
+	$("#nav_upload").addClass("disabled");
+	$("#nav_tag").removeClass("disabled");
+	$("#nav_tag").addClass("active");
+	drawInCanvas(input[0]);
 }
 
 function drawInCanvas(uploadedImg) {
@@ -141,9 +145,9 @@ function assignLabelName(label) {
 	var tag = "";
 	var id = label.id;
 	tag = '<div class="row label">';
-	tag += '<input id="'+ id +'" type="text" class="form-control col-md-8" id="0" placeholder="Etiqueta">';
-	tag += '<button class="btn btn-primary col-md-2" id="btn_register" onclick="editLabel('+ id +')"><i class="fas fa-edit"></i></button>';
-	tag += '<button class="btn btn-secondary col-md-2 d-none" id="btn_register" onclick="deleteLabel('+ id +')"><i class="fas fa-trash-alt"></i></button>';
+		tag += '<input id="'+ id +'" type="text" class="form-control col-md-8" id="0" placeholder="Etiqueta">';
+		tag += '<button class="btn btn-primary col-md-2" id="btn_register" onclick="editLabel('+ id +')"><i class="fas fa-edit"></i></button>';
+		tag += '<button class="btn btn-secondary col-md-2 d-none" id="btn_register" onclick="deleteLabel('+ id +')"><i class="fas fa-trash-alt"></i></button>';
 	tag += '</div>',
 	tagListContainer.append(tag);
 	return label;
@@ -238,20 +242,6 @@ function hasEmptyValues() {
 }
 
 function saveXML() {
-	/*
-	var bb = new BlobBuilder();
-	bb.append((new XMLSerializer).serializeToString(document));
-	var blob = bb.getBlob("application/xhtml+xml;charset=" + document.characterSet);
-	saveAs(blob, "document.xhtml");
-	*/
-	/*
-	var requirejs = require('requirejs');
-	var fs = requirejs('file-saver');
-	var text = "Hello there";
-  	var filename = "labels";
-  	var blob = new Blob([text], {type: "text/plain;charset=utf-8"});
-  	fs.saveAs(blob, filename+".txt");
-  	*/
   	var text = "";
   	var name = "tags";
 
