@@ -6,7 +6,6 @@ var image = new Image();
 var emptyTag = false;
 
 $(document).ready(function(){
-	console.log("CARGADO");	
 	loadSaveButton();
 	$("#btn_save").on("click", saveXML);
 });
@@ -16,7 +15,6 @@ $(document).click(loadSaveButton);
 function handleFiles(input) {
 	var imageUploader = $("#div_imageUploader");
 
-	console.log(input[0]);
 	labelList = [];
 	imageUploader.addClass("d-none");
 	fileSpecs ={name:  input[0].name,
@@ -59,9 +57,7 @@ function drawInCanvas(uploadedImg) {
        	}
     	// First click, the first point was placed
     	if (!emptyTag) {
-    		console.log("NO EMPTY TAG DETECTED");
     		if (!clicked) {
-    			console.log("FIRST CLICK");
 	        	ctx.strokeStyle = "pink";
 	        	ctx.fillStyle = "pink";
 	        	ctx.beginPath();
@@ -120,8 +116,8 @@ function drawLabels(label, context) {
 	var yMin = label.yMin;
 	var yMax = label.yMax;
 
-	context.strokeStyle = "pink";
-    context.fillStyle = "pink";
+	context.strokeStyle = "#00ff00";
+    context.fillStyle = "#00ff00";
     context.rect(xMin, yMin, xMax - xMin, yMax - yMin);
     context.lineWidth="3";
     context.stroke();
@@ -280,6 +276,4 @@ function saveXML() {
   	var file = new Blob([text], {type: "text/xml"});
   	a.href = URL.createObjectURL(file);
   	a.download = name;
-
-  	console.log(text);
 }
