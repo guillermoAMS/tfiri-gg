@@ -1,0 +1,10 @@
+*.jpg
+*.png
+*.jpeg
+*.JPG
+*.JPEG
+*.PNG
+
+*.record
+*.csv
+*.ckpt*
