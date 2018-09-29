@@ -1,10 +1,5 @@
-*.jpg
-*.png
-*.jpeg
-*.JPG
-*.JPEG
-*.PNG
-
+model/test
+model/train
 *.record
 *.csv
 *.ckpt*
