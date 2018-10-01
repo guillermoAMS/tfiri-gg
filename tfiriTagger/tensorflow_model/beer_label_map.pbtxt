@@ -1,0 +1,65 @@
+item {
+  id: 1
+  name: "sol"
+  display_name: "Sol Lata"
+}
+item {
+  id: 2
+  name: "indio"
+  display_name: "Indio Lata"
+}
+item {
+  id: 3
+  name: "tecate"
+  display_name: "Tecate Lata"
+}
+item {
+  id: 4
+  name: "xx"
+  display_name: "XX Lata"
+}
+item {
+  id: 5
+  name: "miller"
+  display_name: "Miller Lata"
+}
+item {
+  id: 6
+  name: "bohemiaP"
+  display_name: "Bohemia"
+}
+item {
+  id: 7
+  name: "strongbowA"
+  display_name: "Strongbow Gold Apple"
+}
+item {
+  id: 8
+  name: "strongbowR"
+  display_name: "Strongbow Red Berries"
+}
+item {
+  id: 9
+  name: "heineken"
+  display_name: "Heineken"
+}
+item {
+  id: 10
+  name: "carta"
+  display_name: "Carta Caguama"
+}
+item {
+  id: 11
+  name: "indioC"
+  display_name: "Indio Caguama"
+}
+item {
+  id: 12
+  name: "tecateC"
+  display_name: "Tecate Caguama"
+}
+item {
+  id: 13
+  name: "heineken6"
+  display_name: "Heineken Six"
+}
